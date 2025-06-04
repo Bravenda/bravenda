@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bravenda</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Bravenda</h1>
+    <nav>
+      <a href="#" onclick="navegar('produtos')">Produtos</a>
+      <a href="#" onclick="navegar('carrinho')">Carrinho</a>
+      <a href="#" onclick="navegar('checkout')">Checkout</a>
+      <a href="#" onclick="navegar('login')">Login</a>
+      <a href="#" onclick="navegar('admin')">Admin</a>
+      <a href="#" onclick="navegar('rastreamento')">Rastreamento</a>
+      <a href="#" onclick="navegar('historia')">Nossa História</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Bem-vindo à Bravenda</h2>
+    <p>Compre variedades de mercadorias com agilidade e segurança, direto da sua casa!</p>
+  </div>
+
+  <div id="infobox" class="infobox"></div>
+
+  <main>
+    <section id="produtos" class="ativo">
+      <div class="produto">
+        <h3>Produto 1</h3>
+        <p>Descrição do produto 1.</p>
+        <button onclick="adicionarCarrinho('Produto 1')">Adicionar ao Carrinho</button>
+      </div>
+      <div class="produto">
+        <h3>Produto 2</h3>
+        <p>Descrição do produto 2.</p>
+        <button onclick="adicionarCarrinho('Produto 2')">Adicionar ao Carrinho</button>
+      </div>
+    </section>
+
+    <section id="carrinho" style="display:none;">
+      <h2>Seu Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <button onclick="navegar('checkout')">Ir para Checkout</button>
+    </section>
+
+    <section id="checkout" style="display:none;">
+      <h2>Checkout</h2>
+      <p>Forma de pagamento: Pix</p>
+      <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    <section id="login" style="display:none;">
+      <h2>Login/Cadastro</h2>
+      <input type="text" placeholder="Usuário" id="usuario" /><br><br>
+      <input type="password" placeholder="Senha" id="senha" /><br><br>
+      <button>Entrar</button>
+    </section>
+
+    <section id="admin" style="display:none;">
+      <h2>Painel Administrativo</h2>
+      <p>Gerencie seus produtos, pedidos e estoque aqui.</p>
+    </section>
+
+    <section id="rastreamento" style="display:none;">
+      <h2>Rastreamento de Pedido</h2>
+      <input type="text" placeholder="Código de rastreio" />
+      <button>Rastrear</button>
+    </section>
+
+    <section id="historia" style="display:none; padding: 2rem; max-width: 800px; margin: auto;">
+      <h2>Nossa História</h2>
+      <p>
+        Fundada em 2025 por um único CEO, a Bravenda nasceu com o propósito de revolucionar o mercado de dropshipping no Brasil.
+        Pensada ponta a ponta para garantir ótima comunicação e agilidade nas compras, cada etapa do desenvolvimento foi um grande desafio,
+        mas no final tudo foi bem-sucedido! A empresa oferece uma experiência completa de compras online, focada em variedades de mercadorias.
+        Com atendimento totalmente digital, a Bravenda conecta fornecedores confiáveis e consumidores, garantindo qualidade e comodidade direto da casa do cliente.
+      </p>
+
+      <h3>Equipe Bravenda</h3>
+      <ul>
+        <li>Ceo Bravenda: Gabriel Almeida</li>
+        <li>Desenvolvedor: Gabriel Almeida</li>
+        <li>Responsável Pelo Designer: Gabriel Almeida</li>
+      </ul>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <img src="https://i.imgur.com/5M6SHZF.png" alt="Logo Bravenda" style="max-width: 200px; width: 100%; height: auto;">
+      </div>
+    </section>
+  </main>
+</body>
+</html>
